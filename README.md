@@ -1,5 +1,11 @@
-# Beauty Salon Troya Nikolova
+# Troya Nikolova Website
 
-Website demo for Beauty Salon Troya Nikolova in Sofia.
+Demo website for Beauty Salon Troya Nikolova in Sofia.
 
-Before final client delivery, confirm exact services and prices, replace the visual placeholder with the salon's real photos/logo, and confirm the preferred booking method.
+Public/verified details used:
+- Address: ул. „Забърде“ 1, Иван Вазов, София
+- Phone: 087 865 0477
+- Public rating: 5.0 / 5 from 48 reviews
+- Instagram: @matronyy
+
+Before final client delivery, confirm exact services/prices, add real salon photography/logo, and confirm the preferred booking method.
