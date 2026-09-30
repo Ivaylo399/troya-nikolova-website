@@ -9,12 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>.booking-modal{position:fixed;inset:0;background:rgba(20,18,16,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.booking-modal.open{display:flex}.booking-box{position:relative;width:min(520px,100%);background:#f5f1eb;padding:42px;box-shadow:0 30px 90px rgba(0,0,0,.25)}.booking-box h2{font-family:"Playfair Display",serif;font-size:38px;line-height:1.05;font-weight:500;margin:0 0 14px}.booking-sub{font-size:13px;line-height:1.7;opacity:.62;margin-bottom:28px}.booking-close{position:absolute;right:16px;top:12px;border:0;background:none;font-size:30px;cursor:pointer;color:#292622}.booking-options{display:grid;gap:10px}.booking-option{display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(41,38,34,.18);padding:18px 20px;transition:.2s}.booking-option:hover{background:#292622;color:#f5f1eb}.booking-option b{font-family:"Playfair Display",serif;font-size:20px;font-weight:500}.booking-option span{font-size:11px;opacity:.65;text-align:right}.booking-option:hover span{opacity:.8}@media(max-width:600px){.booking-box{padding:34px 24px}.booking-box h2{font-size:31px}.booking-option{display:block}.booking-option span{display:block;text-align:left;margin-top:5px}}</style>
 </head>
 <body>
 <header class="nav">
 <a class="brand" href="#top">TROYA <span>NIKOLOVA</span></a>
 <nav><a href="#services">Услуги</a><a href="#about">За салона</a><a href="#contact">Контакти</a></nav>
-<a class="nav-cta" href="tel:+359878650477">Запази час</a>
+<a class="nav-cta" href="#" onclick="openBooking(event)">Запази час</a>
 </header>
 <main id="top">
 <section class="hero">
@@ -22,7 +23,7 @@
 <p class="eyebrow">BEAUTY SALON · SOFIA</p>
 <h1>Красотата е<br><em>в детайла.</em></h1>
 <p class="lead">Професионална грижа, индивидуално отношение и модерни бюти услуги в Иван Вазов.</p>
-<div class="actions"><a class="button primary" href="tel:+359878650477">Запази час</a><a class="button secondary" href="#services">Разгледай услугите</a></div>
+<div class="actions"><a class="button primary" href="#" onclick="openBooking(event)">Запази час</a><a class="button secondary" href="#services">Разгледай услугите</a></div>
 <div class="rating"><strong>5.0</strong><span>★ ★ ★ ★ ★</span><small>48 отзива</small></div>
 </div>
 <div class="hero-art"><div class="art-card"><div class="art-label">TROYA<br>NIKOLOVA</div></div><div class="floating-card"><span>Индивидуална грижа</span><b>С внимание към всеки детайл.</b></div></div>
@@ -30,10 +31,12 @@
 <section class="intro" id="about"><p class="eyebrow">ЗА САЛОНА</p><div><h2>Професионална грижа,<br>създадена за Вас.</h2><p>Beauty Salon Troya Nikolova предлага професионални бюти и козметични услуги с индивидуален подход към всеки клиент. Салонът съчетава прецизна работа, внимание към детайла и модерни техники.</p></div></section>
 <section class="services" id="services"><div class="section-head"><div><p class="eyebrow">УСЛУГИ</p><h2>Всичко необходимо<br>на едно място.</h2></div><p class="section-note">Конкретните услуги и цени могат да бъдат добавени след потвърждение от салона.</p></div>
 <div class="service-grid"><article class="service"><span class="number">01</span><h3>Фризьорски услуги</h3><p>Подстригване, оформяне и професионална грижа за косата.</p></article><article class="service"><span class="number">02</span><h3>Масажи</h3><p>Релаксиращи и козметични масажни услуги според нуждите Ви.</p></article><article class="service"><span class="number">03</span><h3>Козметични услуги</h3><p>Персонализирана грижа и бюти процедури с професионален подход.</p></article></div></section>
-<section class="experience"><div class="experience-panel"><p class="eyebrow">ВАШЕТО ВРЕМЕ</p><h2>Започнете с<br><em>час за Вас.</em></h2><p>Свържете се директно със салона, за да изберете удобен ден и час.</p><a class="button light" href="tel:+359878650477">087 865 0477</a></div>
+<section class="experience"><div class="experience-panel"><p class="eyebrow">ВАШЕТО ВРЕМЕ</p><h2>Започнете с<br><em>час за Вас.</em></h2><p>Свържете се директно със салона, за да изберете удобен ден и час.</p><a class="button light" href="#" onclick="openBooking(event)">Запази час</a></div>
 <div class="hours"><p class="eyebrow">РАБОТНО ВРЕМЕ</p><div class="hours-row"><span>Понеделник</span><b>12:00 – 19:30</b></div><div class="hours-row"><span>Вторник</span><b>10:30 – 19:30</b></div><div class="hours-row"><span>Сряда</span><b>10:30 – 19:30</b></div><div class="hours-row closed"><span>Четвъртък</span><b>Почивен ден</b></div><div class="hours-row"><span>Петък</span><b>10:30 – 19:30</b></div><div class="hours-row"><span>Събота</span><b>12:30 – 19:30</b></div><div class="hours-row"><span>Неделя</span><b>12:00 – 19:30</b></div></div></section>
 <section class="contact" id="contact"><div><p class="eyebrow">КОНТАКТИ</p><h2>Ще се радваме<br>да Ви посрещнем.</h2></div><div class="contact-details"><a href="tel:+359878650477"><span>Телефон</span>087 865 0477</a><a href="https://www.google.com/maps/search/?api=1&query=ul.+Zabarde+1%2C+Sofia" target="_blank" rel="noopener"><span>Адрес</span>ул. „Забърде“ 1, Иван Вазов, София</a><a href="https://www.instagram.com/matronyy/" target="_blank" rel="noopener"><span>Instagram</span>@matronyy</a></div></section>
+<div class="booking-modal" id="bookingModal" aria-hidden="true" onclick="closeBooking(event)"><div class="booking-box" onclick="event.stopPropagation()"><button class="booking-close" onclick="closeBooking(event)" aria-label="Затвори">×</button><p class="eyebrow">ЗАПАЗВАНЕ НА ЧАС</p><h2>Как желаете да се свържете?</h2><p class="booking-sub">Изберете удобен начин и изпратете запитване за свободен час.</p><div class="booking-options"><a href="viber://chat?number=%2B359878650477" class="booking-option"><b>Viber</b><span>Отвори чат със салона</span></a><a href="sms:+359878650477?body=Здравейте! Искам да запазя час в Beauty Salon Troya Nikolova. Бих искал/а да запиша час за [услуга] на [дата], ако има свободен час." class="booking-option"><b>SMS</b><span>Изпрати предварително попълнено съобщение</span></a><a href="https://www.instagram.com/matronyy/" target="_blank" rel="noopener" class="booking-option"><b>Instagram</b><span>Пишете на @matronyy</span></a></div></div></div>
 </main>
 <footer><span>© 2026 Beauty Salon Troya Nikolova</span><span>София · Иван Вазов</span></footer>
+<script>function openBooking(e){e.preventDefault();document.getElementById("bookingModal").classList.add("open");document.getElementById("bookingModal").setAttribute("aria-hidden","false")}function closeBooking(e){if(e) e.preventDefault();document.getElementById("bookingModal").classList.remove("open");document.getElementById("bookingModal").setAttribute("aria-hidden","true")}document.addEventListener("keydown",e=>{if(e.key==="Escape")closeBooking(e)})</script>
 </body>
 </html>
